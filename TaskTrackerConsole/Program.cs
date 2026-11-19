@@ -3,20 +3,19 @@ string gorev = Console.ReadLine()!;
 Console.WriteLine("Önceliği belirleyiniz (1-3)");
 int oncelik = Convert.ToInt32(Console.ReadLine());
 string belirlenmisOncelik = "";
-if (oncelik == 1)
+switch (oncelik)
 {
-    belirlenmisOncelik = "Yüksek";
-}
-else if (oncelik == 2)
-{
-    belirlenmisOncelik = "Orta";
-}
-else if (oncelik == 3)
-{
-    belirlenmisOncelik = "Düşük";
-}
-else
-{
-    belirlenmisOncelik = "Geçersiz öncelik";
+    case 1:
+        belirlenmisOncelik = "Yüksek";
+        break;
+    case 2:
+        belirlenmisOncelik = "Orta";
+        break;
+    case 3:
+        belirlenmisOncelik = "Düşük";
+        break;
+    default:
+        belirlenmisOncelik = "Geçersiz öncelik";
+        break;
 }
 Console.WriteLine($"{gorev} | {belirlenmisOncelik}");
